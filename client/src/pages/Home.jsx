@@ -1,28 +1,30 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
-    <div className='px-4 py-12 max-w-2xl mx-auto'>
-      <h1 className='text-3xl font-bold  mb-4 text-slate-800'>
-        Welcome to my Auth App!
-      </h1>
-      <p className='mb-4 text-slate-700'>
-        This is a full-stack web application built with the MERN (MongoDB,
-        Express, React, Node.js) stack. It includes authentication features that
-        allow users to sign up, log in, and log out, and provides access to
-        protected routes only for authenticated users.
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-gray-800 to-gray-900 text-white">
+    <div className="text-center">
+      <h1 className="text-5xl font-extrabold mb-4">Welcome to Your App</h1>
+      <p className="text-lg mb-8">
+        A full-stack authentication app built with React.js, Redux Toolkit, Tailwind CSS,
+        Google login/register, JSON Web Token (JWT), and Firebase.
       </p>
-      <p className='mb-4 text-slate-700'>
-        The front-end of the application is built with React and uses React
-        Router for client-side routing. The back-end is built with Node.js and
-        Express, and uses MongoDB as the database. Authentication is implemented
-        using JSON Web Tokens (JWT).
-      </p>
-      <p className='mb-4 text-slate-700'>
-        This application is intended as a starting point for building full-stack
-        web applications with authentication using the MERN stack. Feel free to
-        use it as a template for your own projects!
-      </p>
+      <div className="flex items-center justify-center space-x-4">
+        <Link
+          to="/sign-in"
+          className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline-purple transition-transform transform hover:scale-105"
+        >
+          Login
+        </Link>
+        <Link
+          to="/sign-up"
+          className="bg-gradient-to-r from-green-500 to-teal-500 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline-green transition-transform transform hover:scale-105"
+        >
+          Register
+        </Link>
+      </div>
     </div>
+  </div>
   );
 }
